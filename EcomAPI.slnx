@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../EcomAPI3.Tests/EcomAPI3.Tests.csproj" Id="130f4144-e073-46b7-b680-029d75a15afd" />
+  <Project Path="EcomAPI.csproj" />
+</Solution>

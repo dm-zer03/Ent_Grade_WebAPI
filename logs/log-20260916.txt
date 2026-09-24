@@ -1,0 +1,53 @@
+2026-09-16 20:53:08.326 +05:30 [INF] Executed DbCommand (202ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = N'admin@ecom.com') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-09-16 20:53:09.246 +05:30 [INF] User profile is available. Using 'C:\Users\mpiyu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-16 20:53:09.627 +05:30 [INF] Now listening on: http://localhost:5160
+2026-09-16 20:53:09.958 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-16 20:53:09.960 +05:30 [INF] Hosting environment: Development
+2026-09-16 20:53:09.960 +05:30 [INF] Content root path: C:\Users\mpiyu\Music\DM_03\Angular\1_API_ENT\EcomAPI
+2026-09-16 20:53:10.672 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5160/swagger/index.html - null null
+2026-09-16 20:53:11.401 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 299 ms. RequestId: 0HNOK0PL7HRNI:00000001
+2026-09-16 20:53:11.434 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5160/swagger/index.html - 200 null text/html;charset=utf-8 806.085ms
+2026-09-16 20:53:11.495 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5160/_vs/browserLink - null null
+2026-09-16 20:53:11.495 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5160/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-16 20:53:11.507 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5160/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 14.6451ms
+2026-09-16 20:53:11.656 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 164.0034ms
+2026-09-16 20:53:11.786 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5160/swagger/v1/swagger.json - null null
+2026-09-16 20:53:11.870 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 82 ms. RequestId: 0HNOK0PL7HRNJ:00000002
+2026-09-16 20:53:11.871 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5160/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.3587ms
+2026-09-16 20:54:05.717 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5160/api/v1/Auth/login - application/json 60
+2026-09-16 20:54:05.829 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-16 20:54:06.151 +05:30 [INF] Executing endpoint 'EcomAPI.Controllers.AuthController.Login (EcomAPI)'
+2026-09-16 20:54:06.262 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EcomAPI.DTOs.Auth.LoginRequest, System.Threading.CancellationToken) on controller EcomAPI.Controllers.AuthController (EcomAPI).
+2026-09-16 20:54:07.152 +05:30 [INF] Executed DbCommand (125ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__request_Email_0
+2026-09-16 20:54:07.660 +05:30 [INF] User 2 logged in successfully with role Admin.
+2026-09-16 20:54:07.687 +05:30 [INF] Executing OkObjectResult, writing value of type 'EcomAPI.DTOs.Auth.LoginResponse'.
+2026-09-16 20:54:07.722 +05:30 [INF] Executed action EcomAPI.Controllers.AuthController.Login (EcomAPI) in 1447.6299ms
+2026-09-16 20:54:07.723 +05:30 [INF] Executed endpoint 'EcomAPI.Controllers.AuthController.Login (EcomAPI)'
+2026-09-16 20:54:07.727 +05:30 [INF] HTTP POST /api/v1/Auth/login responded 200 in 1921 ms. RequestId: 0HNOK0PL7HRNJ:00000003
+2026-09-16 20:54:07.737 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5160/api/v1/Auth/login - 200 null application/json; charset=utf-8 2021.812ms
+2026-09-16 20:55:25.200 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5160/api/v1/Products - application/json 103
+2026-09-16 20:55:25.493 +05:30 [INF] Executing endpoint 'EcomAPI.Controllers.ProductsController.Create (EcomAPI)'
+2026-09-16 20:55:25.515 +05:30 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EcomAPI.Common.Responses.ApiResponse`1[EcomAPI.DTOs.Products.ProductResponse]]] Create(EcomAPI.DTOs.Products.CreateProductRequest, System.Threading.CancellationToken) on controller EcomAPI.Controllers.ProductsController (EcomAPI).
+2026-09-16 20:55:26.074 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-16 20:55:26.955 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = Boolean), @p3='?' (Size = 200), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([CreatedAt], [Description], [IsActive], [Name], [Price], [StockQuantity], [UpdatedAt])
+OUTPUT INSERTED.[Id], INSERTED.[RowVersion]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-09-16 20:55:27.044 +05:30 [INF] Product 4 created successfully.
+2026-09-16 20:55:27.060 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'EcomAPI.Common.Responses.ApiResponse`1[[EcomAPI.DTOs.Products.ProductResponse, EcomAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-16 20:55:27.136 +05:30 [INF] Executed action EcomAPI.Controllers.ProductsController.Create (EcomAPI) in 1619.9234ms
+2026-09-16 20:55:27.136 +05:30 [INF] Executed endpoint 'EcomAPI.Controllers.ProductsController.Create (EcomAPI)'
+2026-09-16 20:55:27.136 +05:30 [INF] HTTP POST /api/v1/Products responded 201 in 1928 ms. RequestId: 0HNOK0PL7HRNJ:00000004
+2026-09-16 20:55:27.137 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5160/api/v1/Products - 201 null application/json; charset=utf-8 1938.2938ms
